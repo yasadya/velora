@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora — Handmade Little Moments of Magic</title>
+<meta name="description" content="Velora Handmade Soaps — small-batch, botanical skincare rituals crafted by hand in Sri Lanka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,500;1,9..144,600&family=Outfit:wght@300;400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Cursor sparkle canvas -->
+<canvas id="sparkle-canvas"></canvas>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="siteNav">
+  <a href="#home" class="nav__logo">
+    <span class="nav__logo-mark">✿</span>
+    <span class="nav__logo-word">Velora</span>
+  </a>
+  <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#ingredients">Ingredients</a></li>
+    <li><a href="#process">Our Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#shop" class="nav__bag" aria-label="View soaps">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 8h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <span class="nav__bag-count" id="bagCount">0</span>
+  </a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="home">
+  <div class="hero__botanicals" id="heroParallax">
+    <svg class="doodle doodle--fern1" data-speed="18" viewBox="0 0 120 200" width="90"><path d="M60 190 C55 140 55 90 60 10" stroke="#8FA07E" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M60 150 C40 140 25 125 20 105 M60 150 C80 140 95 125 100 105 M60 110 C42 102 30 90 25 72 M60 110 C78 102 90 90 95 72 M60 70 C45 64 35 54 32 40 M60 70 C75 64 85 54 88 40" stroke="#8FA07E" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <svg class="doodle doodle--bloom1" data-speed="30" viewBox="0 0 100 100" width="60"><g fill="#E3A5AE"><circle cx="50" cy="30" r="16"/><circle cx="72" cy="46" r="16"/><circle cx="63" cy="70" r="16"/><circle cx="37" cy="70" r="16"/><circle cx="28" cy="46" r="16"/></g><circle cx="50" cy="50" r="12" fill="#E8C879"/></svg>
+    <svg class="doodle doodle--leaf1" data-speed="24" viewBox="0 0 80 60" width="70"><path d="M4 56C10 20 40 4 76 4 70 40 40 56 4 56Z" fill="#A9C79A"/><path d="M8 52C30 30 50 16 74 6" stroke="#5F7A50" stroke-width="1.6" fill="none"/></svg>
+    <svg class="doodle doodle--sparkle1" data-speed="42" viewBox="0 0 40 40" width="26"><path d="M20 0 L23 17 L40 20 L23 23 L20 40 L17 23 L0 20 L17 17 Z" fill="#E8C879"/></svg>
+    <svg class="doodle doodle--sparkle2" data-speed="50" viewBox="0 0 40 40" width="18"><path d="M20 0 L23 17 L40 20 L23 23 L20 40 L17 23 L0 20 L17 17 Z" fill="#C9B8DB"/></svg>
+    <svg class="doodle doodle--bloom2" data-speed="14" viewBox="0 0 100 100" width="48"><g fill="#C9B8DB"><circle cx="50" cy="30" r="14"/><circle cx="70" cy="45" r="14"/><circle cx="62" cy="68" r="14"/><circle cx="38" cy="68" r="14"/><circle cx="30" cy="45" r="14"/></g><circle cx="50" cy="48" r="10" fill="#FBF3E8"/></svg>
+    <svg class="doodle doodle--leaf2" data-speed="20" viewBox="0 0 80 60" width="54"><path d="M76 56C70 20 40 4 4 4 10 40 40 56 76 56Z" fill="#8FA07E"/></svg>
+  </div>
+
+  <div class="hero__inner">
+    <p class="eyebrow eyebrow--hero">A Little Ritual of Magic</p>
+    <h1 class="hero__headline">Handmade Little<br>Moments of <em>Magic.</em></h1>
+    <p class="hero__sub">Thoughtfully crafted soaps and skincare, made to turn everyday self-care into a beautiful ritual.</p>
+    <div class="hero__ctas">
+      <a href="#shop" class="btn btn--primary">Explore Our Soaps</a>
+      <a href="#story" class="btn btn--ghost">Discover Velora</a>
+    </div>
+  </div>
+
+  <div class="hero__product" id="heroProduct">
+    <div class="hero__product-glow"></div>
+    <img src="assets/products/rose-cupcake-4.jpg" alt="Velora handmade rose cupcake soap resting in a hand" class="hero__product-img">
+    <span class="hero__ribbon">Small Batch ✿</span>
+  </div>
+
+  <a href="#story" class="hero__scroll" aria-label="Scroll to explore">
+    <span></span> Scroll to wander
+  </a>
+
+  <svg class="hero__wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,110 1440,56 L1440,120 L0,120 Z" fill="#FBF3E8"/></svg>
+</header>
+
+<main>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="story">
+  <div class="about__grid">
+    <div class="about__media">
+      <img src="assets/products/rose-cupcake-1.jpg" alt="Two Velora rose cupcake soaps held in a hand" class="about__img about__img--main">
+      <img src="assets/products/citrus-bloom-2.jpg" alt="Velora citrus bloom soap bars on grass" class="about__img about__img--small">
+      <span class="about__note">handmade with<br>tiny careful hands ✍︎</span>
+      <svg class="about__grow" viewBox="0 0 160 220" width="110" aria-hidden="true">
+        <path class="grow-path" d="M80 210 V70" stroke="#8FA07E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path class="grow-path" d="M80 130 C55 120 40 100 36 78" stroke="#8FA07E" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <path class="grow-path" d="M80 130 C105 120 120 100 124 78" stroke="#8FA07E" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <circle class="grow-bud" cx="80" cy="60" r="14" fill="#E3A5AE"/>
+        <circle class="grow-bud" cx="80" cy="60" r="7" fill="#E8C879"/>
+      </svg>
+    </div>
+    <div class="about__copy">
+      <p class="eyebrow">Made by Hand, Made with Love</p>
+      <h2 class="section-title">Made Slowly.<br>Made With <em>Intention.</em></h2>
+      <p class="about__lede">Every Velora bar begins on a small wooden table in Sri Lanka — lye and oils, a whipped soap "frosting," and roses piped one petal at a time. Nothing is rushed.</p>
+      <p>We believe self-care should feel like a little ceremony, not another chore. So we pour small batches, cure them slowly, and finish each bar with skin-loving actives — kojic acid, niacinamide, cocoa, honey — wrapped in scents that feel like a garden after rain.</p>
+      <div class="about__stats">
+        <div><strong>100%</strong><span>Handmade in small batches</span></div>
+        <div><strong>4–6</strong><span>Weeks slow-cured</span></div>
+        <div><strong>🇱🇰</strong><span>Made in Sri Lanka</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="shop" id="shop">
+  <p class="eyebrow eyebrow--center">Find Your Little Ritual</p>
+  <h2 class="section-title section-title--center">Our Handmade Soaps</h2>
+  <p class="shop__intro">Flip a card to peek at what's inside. Tap "Add to Bag" and we'll finish your order together on WhatsApp. ✿</p>
+
+  <div class="product-grid" id="productGrid">
+
+    <!-- Rose Cupcake -->
+    <article class="product-card" data-name="Rose Cupcake Soap" data-price="1450">
+      <div class="product-card__flip">
+        <div class="product-card__face product-card__face--front">
+          <span class="scallop scallop--top"></span>
+          <img src="assets/products/rose-cupcake-3.jpg" alt="Rose Cupcake handmade soap">
+          <div class="product-card__front-text">
+            <h3>Rose Cupcake</h3>
+            <p class="product-card__price">LKR 1,450</p>
+          </div>
+          <span class="product-card__flip-hint">tap to peek ↻</span>
+        </div>
+        <div class="product-card__face product-card__face--back">
+          <h3>Rose Cupcake</h3>
+          <ul class="product-card__facts">
+            <li><b>Actives:</b> Niacinamide</li>
+            <li><b>Scent:</b> Milk &amp; Honey</li>
+            <li><b>Feel:</b> Whipped, creamy lather</li>
+            <li><b>Detail:</b> Hand-piped soap "frosting" with a rose bud</li>
+          </ul>
+          <button class="btn btn--small btn--primary product-card__buy">Add to Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Strawberry Cream -->
+    <article class="product-card" data-name="Strawberry Cream Soap" data-price="1250">
+      <div class="product-card__flip">
+        <div class="product-card__face product-card__face--front">
+          <span class="scallop scallop--top"></span>
+          <img src="assets/products/strawberry-cream-1.jpg" alt="Strawberry Cream handmade soap bar">
+          <div class="product-card__front-text">
+            <h3>Strawberry Cream</h3>
+            <p class="product-card__price">LKR 1,250</p>
+          </div>
+          <span class="product-card__flip-hint">tap to peek ↻</span>
+        </div>
+        <div class="product-card__face product-card__face--back">
+          <h3>Strawberry Cream</h3>
+          <ul class="product-card__facts">
+            <li><b>Actives:</b> Niacinamide</li>
+            <li><b>Scent:</b> Milk &amp; Honey</li>
+            <li><b>Feel:</b> Soft, cushiony lather</li>
+            <li><b>Detail:</b> Rosy ombre bar topped with whipped soap and a rose</li>
+          </ul>
+          <button class="btn btn--small btn--primary product-card__buy">Add to Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cocoa Bliss -->
+    <article class="product-card" data-name="Cocoa Bliss Soap" data-price="1350">
+      <div class="product-card__flip">
+        <div class="product-card__face product-card__face--front">
+          <span class="scallop scallop--top"></span>
+          <img src="assets/products/cocoa-bliss-1.jpg" alt="Cocoa Bliss handmade soap bar">
+          <div class="product-card__front-text">
+            <h3>Cocoa Bliss</h3>
+            <p class="product-card__price">LKR 1,350</p>
+          </div>
+          <span class="product-card__flip-hint">tap to peek ↻</span>
+        </div>
+        <div class="product-card__face product-card__face--back">
+          <h3>Cocoa Bliss</h3>
+          <ul class="product-card__facts">
+            <li><b>Actives:</b> Niacinamide</li>
+            <li><b>Scent:</b> Chocolate</li>
+            <li><b>Feel:</b> Warm, comforting lather</li>
+            <li><b>Detail:</b> Layered cocoa bar with a chocolate rose</li>
+          </ul>
+          <button class="btn btn--small btn--primary product-card__buy">Add to Bag</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Citrus Bloom -->
+    <article class="product-card" data-name="Citrus Bloom Soap" data-price="1250">
+      <div class="product-card__flip">
+        <div class="product-card__face product-card__face--front">
+          <span class="scallop scallop--top"></span>
+          <img src="assets/products/citrus-bloom-1.jpg" alt="Citrus Bloom handmade soap bar">
+          <div class="product-card__front-text">
+            <h3>Citrus Bloom</h3>
+            <p class="product-card__price">LKR 1,250</p>
+          </div>
+          <span class="product-card__flip-hint">tap to peek ↻</span>
+        </div>
+        <div class="product-card__face product-card__face--back">
+          <h3>Citrus Bloom</h3>
+          <ul class="product-card__facts">
+            <li><b>Actives:</b> Kojic Acid</li>
+            <li><b>Scent:</b> Lemon</li>
+            <li><b>Feel:</b> Fresh, zesty lather</li>
+            <li><b>Detail:</b> Sunny citrus bar with whipped top</li>
+          </ul>
+          <button class="btn btn--small btn--primary product-card__buy">Add to Bag</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== INGREDIENTS ===== -->
+<section class="ingredients" id="ingredients">
+  <p class="eyebrow eyebrow--center">From Nature, With Care</p>
+  <h2 class="section-title section-title--center">A Little Botanical Garden</h2>
+  <p class="ingredients__intro">Tap a bloom to see what it does for your skin.</p>
+
+  <div class="garden" id="garden">
+    <button class="ingredient" data-title="Kojic Acid" data-desc="A gentle brightening active found in our Citrus Bloom bar — helps even out tone over time." style="--x:8%; --y:15%;">
+      <span class="ingredient__icon">🍋</span><span class="ingredient__label">Lemon</span>
+    </button>
+    <button class="ingredient" data-title="Niacinamide" data-desc="Vitamin B3 in our Rose Cupcake, Strawberry Cream and Cocoa Bliss bars — soothes and supports the skin barrier." style="--x:32%; --y:6%;">
+      <span class="ingredient__icon">🌸</span><span class="ingredient__label">Rose</span>
+    </button>
+    <button class="ingredient" data-title="Cocoa" style="--x:58%; --y:14%;" data-desc="Rich, warming cocoa butter melts into Cocoa Bliss for a comforting, softening lather.">
+      <span class="ingredient__icon">🍫</span><span class="ingredient__label">Cocoa</span>
+    </button>
+    <button class="ingredient" data-title="Honey" data-desc="A drop of raw honey sweetens our Milk & Honey scented bars and helps draw in moisture." style="--x:80%; --y:22%;">
+      <span class="ingredient__icon">🍯</span><span class="ingredient__label">Honey</span>
+    </button>
+    <button class="ingredient" data-title="Milk" data-desc="Creamy milk softens the lather in our Rose Cupcake and Strawberry Cream soaps." style="--x:16%; --y:52%;">
+      <span class="ingredient__icon">🥛</span><span class="ingredient__label">Milk</span>
+    </button>
+    <button class="ingredient" data-title="Lemon Peel" data-desc="Bright citrus oils lift the Citrus Bloom bar with a fresh, zesty aroma." style="--x:44%; --y:58%;">
+      <span class="ingredient__icon">🌿</span><span class="ingredient__label">Botanicals</span>
+    </button>
+    <button class="ingredient" data-title="Oats" data-desc="Softly milled oats are gently folded in for a comforting, cushiony texture." style="--x:68%; --y:50%;">
+      <span class="ingredient__icon">🌾</span><span class="ingredient__label">Oats</span>
+    </button>
+    <button class="ingredient" data-title="Whipped Soap" data-desc="Every bar is topped with hand-whipped soap 'frosting,' piped just like icing on a cake." style="--x:88%; --y:60%;">
+      <span class="ingredient__icon">🪻</span><span class="ingredient__label">Lavender</span>
+    </button>
+  </div>
+
+  <div class="ingredient-card" id="ingredientCard">
+    <button class="ingredient-card__close" id="ingredientClose" aria-label="Close">✕</button>
+    <h4 id="ingredientCardTitle">Kojic Acid</h4>
+    <p id="ingredientCardDesc">Description</p>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process">
+  <p class="eyebrow eyebrow--center">The Velora Process</p>
+  <h2 class="section-title section-title--center">How a Bar Comes to Life</h2>
+
+  <div class="process__track">
+    <div class="process__step" data-step="1">
+      <img src="assets/process/p1-lye.jpg" alt="Cutting and preparing soap pieces">
+      <span class="process__num">01</span>
+      <h3>Choose</h3>
+      <p>We measure lye, water and thoughtfully selected oils.</p>
+    </div>
+    <div class="process__step" data-step="2">
+      <img src="assets/process/p2-oils.jpg" alt="Measuring oils and butters by hand">
+      <span class="process__num">02</span>
+      <h3>Blend</h3>
+      <p>Oils and lye are carefully combined by hand until smooth.</p>
+    </div>
+    <div class="process__step" data-step="3">
+      <img src="assets/process/p3-combine.jpg" alt="Combining lye and oils">
+      <span class="process__num">03</span>
+      <h3>Pour</h3>
+      <p>Colour, scent and small batches are poured into the mould.</p>
+    </div>
+    <div class="process__step" data-step="4">
+      <img src="assets/process/p4-trace.jpg" alt="Hand-made soap roses drying">
+      <span class="process__num">04</span>
+      <h3>Pipe</h3>
+      <p>We whip soap into frosting and piece together tiny roses, by hand.</p>
+    </div>
+    <div class="process__step" data-step="5">
+      <img src="assets/process/p6-cut.jpg" alt="Cutting cured soap into bars">
+      <span class="process__num">05</span>
+      <h3>Cure</h3>
+      <p>Bars rest 24–48 hours, then cure for 4–6 weeks to soften beautifully.</p>
+    </div>
+    <div class="process__step" data-step="6">
+      <img src="assets/process/p7-final.jpg" alt="Finished Velora soap bar in hand">
+      <span class="process__num">06</span>
+      <h3>Wrap</h3>
+      <p>Finished, labelled and wrapped with love, ready for your ritual.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LITTLE DETAILS ===== -->
+<section class="details">
+  <p class="eyebrow eyebrow--center">The Little Details</p>
+  <h2 class="section-title section-title--center">A Scrapbook of Small Things</h2>
+
+  <div class="scrapbook">
+    <figure class="scrapbook__item scrapbook__item--1">
+      <img src="assets/products/rose-cupcake-2.jpg" alt="Rose cupcake soaps side by side">
+      <figcaption>Handmade</figcaption>
+    </figure>
+    <figure class="scrapbook__item scrapbook__item--2">
+      <img src="assets/products/cocoa-bliss-2.jpg" alt="Cocoa bliss soap bar close up">
+      <figcaption>Small Batch</figcaption>
+    </figure>
+    <figure class="scrapbook__item scrapbook__item--3">
+      <img src="assets/products/citrus-bloom-2.jpg" alt="Citrus bloom soap on grass">
+      <figcaption>Thoughtfully Crafted</figcaption>
+    </figure>
+    <figure class="scrapbook__item scrapbook__item--4">
+      <img src="assets/process/p5-roses.jpg" alt="Hand-piped soap roses drying on cloth">
+      <figcaption>Nature Inspired</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="love">
+  <p class="eyebrow eyebrow--center">Customer Love</p>
+  <h2 class="section-title section-title--center">Little Notes From You</h2>
+  <p class="love__note">✎ a few kind words — pop in your real reviews here</p>
+
+  <div class="postcards">
+    <div class="postcard postcard--1">
+      <p class="postcard__stars">★★★★★</p>
+      <p>"The Rose Cupcake soap is almost too pretty to use — it smells like a bakery and a garden at once."</p>
+      <span class="postcard__from">— Aisha, Colombo</span>
+    </div>
+    <div class="postcard postcard--2">
+      <p class="postcard__stars">★★★★★</p>
+      <p>"My skin has never felt this soft. The Citrus Bloom bar is now a permanent fixture in my shower."</p>
+      <span class="postcard__from">— Nethmi, Kandy</span>
+    </div>
+    <div class="postcard postcard--3">
+      <p class="postcard__stars">★★★★★</p>
+      <p>"Cocoa Bliss smells incredible and the little rose on top made a perfect gift for my sister."</p>
+      <span class="postcard__from">— Rashmi, Galle</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / CTA ===== -->
+<section class="cta" id="contact">
+  <div class="cta__inner">
+    <svg class="cta__flower" viewBox="0 0 100 100" width="70" aria-hidden="true"><g fill="#E3A5AE"><circle cx="50" cy="30" r="16"/><circle cx="72" cy="46" r="16"/><circle cx="63" cy="70" r="16"/><circle cx="37" cy="70" r="16"/><circle cx="28" cy="46" r="16"/></g><circle cx="50" cy="50" r="12" fill="#E8C879"/></svg>
+    <h2 class="section-title">Let's Start Your<br><em>Little Ritual.</em></h2>
+    <p>Message us on WhatsApp for orders, custom scents, or wholesale — we reply with love (and soap puns).</p>
+    <a id="whatsappCta" href="https://wa.me/94755716581?text=Hi%20Velora!%20I%27d%20love%20to%20know%20more%20about%20your%20soaps." class="btn btn--primary btn--lg" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <svg class="footer__wave" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,100 L0,100 Z" fill="#4A332C"/></svg>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="footer__logo">✿ Velora</p>
+      <p class="footer__tag">Small rituals. Beautifully made.</p>
+      <p class="footer__made">🇱🇰 Made with love in Sri Lanka</p>
+    </div>
+    <div class="footer__links">
+      <div>
+        <h5>Explore</h5>
+        <a href="#shop">Shop</a>
+        <a href="#story">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h5>Say Hello</h5>
+        <a href="https://wa.me/94755716581" target="_blank" rel="noopener">WhatsApp: +94 75 571 6581</a>
+        <a href="mailto:veloraskincare@gmail.com">veloraskincare@gmail.com</a>
+        <a href="https://www.instagram.com/velora_skincare.co?utm_source=qr&igsh=ZjF1bndtcTA1MXZ0" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+    <div class="footer__doodles" aria-hidden="true">
+      <svg viewBox="0 0 80 60" width="60"><path d="M4 56C10 20 40 4 76 4 70 40 40 56 4 56Z" fill="#6B4A3E"/></svg>
+    </div>
+  </div>
+  <p class="footer__bottom">© <span id="year"></span> Velora Handmade Soaps. Every bar, poured by hand.</p>
+</footer>
+
+<!-- ===== FAQ (anchor target) ===== -->
+<div id="faq" style="position:relative;top:-1px;"></div>
+
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="https://wa.me/94755716581" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Message Velora on WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3C9 3 3.2 8.8 3.2 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2.1c2 .1 2.9 1 6.6 1 7 0 12.8-5.8 12.8-12.8S23 3 16 3Zm0 23.3c-2 0-3.9-.6-5.5-1.6l-.4-.2-3.8 1.2 1.3-3.7-.3-.4a10.4 10.4 0 0 1-1.7-5.6C5.6 10 10.2 5.4 16 5.4S26.4 10 26.4 15.8 21.8 26.3 16 26.3Zm5.9-7.8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.6 1.9.7.8.3 1.5.2 2 .1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3Z"/></svg>
+</a>
+
+<!-- Cart toast -->
+<div class="toast" id="toast"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
